@@ -1,7 +1,7 @@
-import Image from "next/image";
-import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
-import BlurredShape from "@/public/images/blurred-shape.svg";
-import FeaturesImage from "@/public/images/features.png";
+import Image from 'next/image';
+import BlurredShapeGray from '@/public/images/blurred-shape-gray.svg';
+import BlurredShape from '@/public/images/blurred-shape.svg';
+import FeaturesImage from '@/public/images/features.png';
 
 export default function Features() {
   return (
@@ -10,11 +10,10 @@ export default function Features() {
         className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
         aria-hidden="true"
       >
-        <Image
+        <img
           className="max-w-none"
-          src={BlurredShapeGray}
-          width={760}
-          height={668}
+          src="/images/blurred-shape-gray.svg"
+          style={{ width: '760px', height: '668px' }}
           alt="Blurred shape"
         />
       </div>
@@ -22,11 +21,10 @@ export default function Features() {
         className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -mb-80 -translate-x-[120%] opacity-50"
         aria-hidden="true"
       >
-        <Image
+        <img
           className="max-w-none"
-          src={BlurredShape}
-          width={760}
-          height={668}
+          src="/images/blurred-shape.svg"
+          style={{ width: '760px', height: '668px' }}
           alt="Blurred shape"
         />
       </div>
@@ -49,11 +47,10 @@ export default function Features() {
             </p>
           </div>
           <div className="flex justify-center pb-4 md:pb-12" data-aos="fade-up">
-            <Image
+            <img
               className="max-w-none"
-              src={FeaturesImage}
-              width={1104}
-              height={384}
+              src="/images/features.png"
+              style={{ width: '1104px', height: '384px' }}
               alt="Features"
             />
           </div>

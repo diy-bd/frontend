@@ -13,7 +13,6 @@ export default function Header() {
             'url("https://images.unsplash.com/photo-1626761191814-a9dc9efd085c?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2664&amp;q=80")',
         }}
       >
-        <span className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800"></span>
         <h1 className="block antialiased tracking-normal font-sans text-2xl font-semibold leading-tight text-white mb-4 !leading-tight lg:text-7xl z-20">
           Empowering Businesses with AI-Driven Solutions
         </h1>
