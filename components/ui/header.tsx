@@ -14,15 +14,14 @@ export default function Header() {
         }}
       >
         <span className="absolute top-0 left-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-gray-900 to-slate-800"></span>
-        <h1 className="block antialiased tracking-normal font-sans text-5xl font-semibold leading-tight text-white mb-4 !leading-tight lg:text-7xl z-20">
-          Check out our new collection
+        <h1 className="block antialiased tracking-normal font-sans text-2xl font-semibold leading-tight text-white mb-4 !leading-tight lg:text-7xl z-20">
+          Empowering Businesses with AI-Driven Solutions
         </h1>
         <p className="block antialiased font-sans text-xl font-normal leading-relaxed text-white mb-12 w-full opacity-80 md:w-10/12 lg:w-7/12 mx-auto px-28 z-10">
-          The Basic Starter Pack allows you to fully express your vibrant
-          personality with four grayscale options. Feeling adventurous? Put on a
-          heather gray shirt. Want to be a trendsetter? Try our exclusive
-          colorway: `Orange`. Need to add an extra pop of color to your outfit?
-          Our white shirt has you covered.
+          We specialize in empowering businesses of all sizes from ambitious
+          startups to established enterprises with cutting-edge digital
+          marketing strategies, intelligent automation tools, and ethical brand
+          consulting services.
         </p>
         <div className="w-auto mx-auto">
           <div className="flex items-center">
@@ -30,7 +29,7 @@ export default function Header() {
               className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3.5 px-7 rounded-lg bg-dark text-white w-full z-10"
               type="button"
             >
-              Show new arrival
+              Book a Session
             </button>
           </div>
         </div>
