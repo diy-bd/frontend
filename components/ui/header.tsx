@@ -5,7 +5,7 @@ import Logo from './logo';
 
 export default function Header() {
   return (
-    <header className="h-screen min-h-screen w-screen bg-white">
+    <header className="h-screen min-h-screen w-screen bg-white" id="home">
       <div
         className="relative h-screen flex align-center flex-col justify-center text-center bg-cover"
         style={{

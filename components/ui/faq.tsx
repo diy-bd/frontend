@@ -117,7 +117,7 @@ export default function Faq() {
   ]);
 
   return (
-    <section className="relative">
+    <section className="relative" id="faq">
       <div className="px-6 py-10 mx-auto max-w-6xl">
         <h1 className="text-2xl font-semibold text-gray-800 lg:text-3xl text-white">
           FAQ's

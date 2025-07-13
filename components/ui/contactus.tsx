@@ -1,6 +1,34 @@
+'use client';
+import { useState } from 'react';
+
 export default function ContactUs() {
+  const [result, setResult] = useState('');
+
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setResult('Sending....');
+    const formData = new FormData(event.target as HTMLFormElement);
+
+    formData.append('access_key', '76f76ddd-c6b4-41f7-aba4-7053feb7ff46');
+
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: formData,
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult('Form Submitted Successfully');
+      (event.target as HTMLFormElement).reset();
+    } else {
+      console.log('Error', data);
+      setResult(data.message);
+    }
+  };
+
   return (
-    <section className="relative ">
+    <section className="relative " id="contact">
       <div className=" flex flex-col px-6 py-12 mx-auto  max-w-6xl ">
         <div className="flex-1 lg:flex lg:items-center lg:-mx-6">
           <div className="text-white lg:w-1/2 lg:mx-6">
@@ -171,7 +199,7 @@ export default function ContactUs() {
                 Contact form
               </h1>
 
-              <form className="mt-4">
+              <form className="mt-4" onSubmit={onSubmit}>
                 <div className="flex-1">
                   <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">
                     Full Name
@@ -180,6 +208,7 @@ export default function ContactUs() {
                     type="text"
                     placeholder="John Doe"
                     className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                    name="name"
                   />
                 </div>
 
@@ -191,6 +220,7 @@ export default function ContactUs() {
                     type="email"
                     placeholder="johndoe@example.com"
                     className="block w-full px-5 py-3 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                    name="email"
                   />
                 </div>
 
@@ -201,13 +231,21 @@ export default function ContactUs() {
                   <textarea
                     className="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
                     placeholder="Message"
+                    name="message"
                   ></textarea>
                 </div>
 
-                <button className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">
+                <button
+                  type="submit"
+                  className="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                >
                   get in touch
                 </button>
               </form>
+
+              {result && (
+                <div className="mt-4 text-sm text-green-600">{result}</div>
+              )}
             </div>
           </div>
         </div>

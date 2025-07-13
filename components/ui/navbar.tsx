@@ -28,7 +28,7 @@ export default function Navbar() {
     >
       <div className="flex items-center justify-between text-blue-gray-900">
         <a
-          href="/"
+          href="#home"
           className="block antialiased tracking-normal font-sans text-base font-semibold leading-relaxed text-inherit mr-4 cursor-pointer py-1.5 lg:ml-2"
         >
           Agent DiY
@@ -36,7 +36,7 @@ export default function Navbar() {
         <div className="hidden lg:block">
           <nav className="flex flex-col gap-1 min-w-[240px] font-sans text-base font-normal text-blue-gray-700 mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
             <a
-              href="#"
+              href="#about"
               aria-expanded="false"
               aria-haspopup="menu"
               id=":r2:"
@@ -50,7 +50,7 @@ export default function Navbar() {
               </button>
             </a>
             <a
-              href="#"
+              href="#services"
               aria-expanded="false"
               aria-haspopup="menu"
               id=":r2:"
@@ -64,7 +64,7 @@ export default function Navbar() {
               </button>
             </a>
             <a
-              href="#"
+              href="#features"
               aria-expanded="false"
               aria-haspopup="menu"
               id=":r2:"
@@ -78,7 +78,7 @@ export default function Navbar() {
               </button>
             </a>
             <a
-              href="#"
+              href="#pricing"
               aria-expanded="false"
               aria-haspopup="menu"
               id=":r2:"
@@ -92,7 +92,7 @@ export default function Navbar() {
               </button>
             </a>
             <a
-              href="#"
+              href="#success-stories"
               aria-expanded="false"
               aria-haspopup="menu"
               id=":r2:"
@@ -106,7 +106,7 @@ export default function Navbar() {
               </button>
             </a>
             <a
-              href="#"
+              href="#contact"
               aria-expanded="false"
               aria-haspopup="menu"
               id=":r2:"
@@ -123,7 +123,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden gap-2 lg:flex">
-          <a href="/astro-launch-ui/signup">
+          <a href="https://calendly.com/contact-agentdiy/30min">
             <button
               className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-2 px-4 rounded-lg bg-dark text-white"
               type="button"

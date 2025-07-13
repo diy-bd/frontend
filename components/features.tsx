@@ -203,7 +203,7 @@ export default function Features() {
     },
   ]);
   return (
-    <section className="relative">
+    <section className="relative" id="features">
       <div
         className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
         aria-hidden="true"

@@ -21,7 +21,7 @@ export default function AboutUs() {
   ]);
 
   return (
-    <section className="">
+    <section className="" id="about">
       <div className="container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
         <div className="flex flex-col items-center w-full lg:flex-row lg:w-1/2">
           <div className="flex justify-center order-2 mt-6 lg:mt-0 lg:space-y-3 lg:flex-col">
