@@ -25,7 +25,7 @@ import ClientImg09 from '@/public/images/client-logo-09.svg';
 const testimonials = [
   {
     img: '/images/testimonial-01.jpg',
-    clientImg: ClientImg01,
+    clientImg: '/images/client-logo-01.svg',
     name: 'MaKayla P.',
     company: 'Disney',
     content:
@@ -34,7 +34,7 @@ const testimonials = [
   },
   {
     img: '/images/testimonial-02.jpg',
-    clientImg: ClientImg02,
+    clientImg: '/images/client-logo-02.svg',
     name: 'Andrew K.',
     company: 'Samsung',
     content:
@@ -43,7 +43,7 @@ const testimonials = [
   },
   {
     img: '/images/testimonial-03.jpg',
-    clientImg: ClientImg03,
+    clientImg: '/images/client-logo-03.svg',
     name: 'Lucy D.',
     company: 'Rio',
     content:
@@ -52,7 +52,7 @@ const testimonials = [
   },
   {
     img: '/images/testimonial-04.jpg',
-    clientImg: ClientImg04,
+    clientImg: '/images/client-logo-04.svg',
     name: 'Pavel M.',
     company: 'Canon',
     content:
@@ -61,7 +61,7 @@ const testimonials = [
   },
   {
     img: '/images/testimonial-05.jpg',
-    clientImg: ClientImg05,
+    clientImg: '/images/client-logo-05.svg',
     name: 'Miriam E.',
     company: 'Cadbury',
     content:
@@ -70,7 +70,7 @@ const testimonials = [
   },
   {
     img: '/images/testimonial-06.jpg',
-    clientImg: ClientImg06,
+    clientImg: '/images/client-logo-06.svg',
     name: 'Eloise V.',
     company: 'Maffell',
     content:
@@ -79,7 +79,7 @@ const testimonials = [
   },
   {
     img: '/images/testimonial-07.jpg',
-    clientImg: ClientImg07,
+    clientImg: '/images/client-logo-07.svg',
     name: 'Pierre-Gilles L.',
     company: 'Binance',
     content:
@@ -88,7 +88,7 @@ const testimonials = [
   },
   {
     img: '/images/testimonial-08.jpg',
-    clientImg: ClientImg08,
+    clientImg: '/images/client-logo-08.svg',
     name: 'Danielle K.',
     company: 'Forbes Inc.',
     content:
@@ -97,7 +97,7 @@ const testimonials = [
   },
   {
     img: '/images/testimonial-09.jpg',
-    clientImg: ClientImg09,
+    clientImg: '/images/client-logo-09.svg',
     name: 'Mary P.',
     company: 'Ray Ban',
     content:
@@ -286,7 +286,7 @@ export function Testimonial({
         <div>
           <img
             src={testimonial.clientImg}
-            style={{ width: '36px', height: '36px' }}
+            style={{ width: '36px' }}
             alt="Client logo"
           />
         </div>
