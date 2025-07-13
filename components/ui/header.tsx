@@ -27,6 +27,12 @@ export default function Header() {
             <button
               className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-sm py-3.5 px-7 rounded-lg bg-dark text-white w-full z-10"
               type="button"
+              onClick={() => {
+                window.open(
+                  'https://calendly.com/contact-agentdiy/30min',
+                  '_blank'
+                );
+              }}
             >
               Book a Session
             </button>
