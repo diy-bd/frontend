@@ -12,7 +12,7 @@ const MinusIcon = () => {
     >
       <path
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
         strokeWidth="2"
         d="M20 12H4"
       ></path>
@@ -31,7 +31,7 @@ const PlusIcon = () => {
     >
       <path
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
         strokeWidth="2"
         d="M12 4v16m8-8H4"
       />
@@ -127,7 +127,7 @@ export default function Faq() {
 
         <div>
           {faqs.map((faq, index) => (
-            <>
+            <div key={index}>
               <div>
                 <button
                   className="flex items-center focus:outline-none"
@@ -154,7 +154,7 @@ export default function Faq() {
               </div>
 
               <hr className="my-8 border-gray-200 border-gray-700" />
-            </>
+            </div>
           ))}
         </div>
       </div>

@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function AboutUs() {
   const [activeTab, setActiveTab] = useState(0);
@@ -8,21 +8,26 @@ export default function AboutUs() {
       title: 'Our Mission',
       description:
         'Agent DiY empowers businesses with ethical, high-impact digital solutions that drive sustainable growth across all sectors. We deliver AI-powered marketing automation and CRM tools designed to level the playing field, ensuring every business— regardless of size—can compete fairly and achieve meaningful success in the digital marketplace.',
-      image:
-        'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80',
+      image: '/images/mission.webp',
     },
     {
       title: 'Our Vision',
       description:
         'Agent DiY envisions a future where every business thrives equitably through innovative, trustworthy technology. We see a digital commerce ecosystem where AI tools eliminate unfair advantages, creating fair opportunities for all brands to build trusted, high-impact businesses with integrity and innovation—from Dhaka to the world.',
-      image:
-        'https://images.unsplash.com/photo-1579586337278-3befd40fd17a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80',
+      image: '/images/vision.webp',
     },
   ]);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % aboutUsData.length);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [aboutUsData.length]);
+
   return (
     <section className="" id="about">
-      <div className="container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+      <div className="container flex flex-col px-6 py-4 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center my-[20vh]">
         <div className="flex flex-col items-center w-full lg:flex-row lg:w-1/2">
           <div className="flex justify-center order-2 mt-6 lg:mt-0 lg:space-y-3 lg:flex-col">
             {aboutUsData.map((item, index) => (

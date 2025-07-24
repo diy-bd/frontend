@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Home - Open PRO',
-  description: 'Page description',
+  title: 'Agent DiY',
+  description: 'Empowering Businesses with AI-Driven Solutions',
 };
 
 import PageIllustration from '@/components/page-illustration';
@@ -21,8 +21,8 @@ export default function Home() {
       <AboutUs />
 
       {/* <Hero /> */}
-      <Features />
       <Services />
+      <Features />
       <Pricing />
       <Testimonials />
       {/* <Cta /> */}
