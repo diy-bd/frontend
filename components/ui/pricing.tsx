@@ -25,16 +25,14 @@ export default function Pricing() {
           <div className="relative bg-gray-900 border-gray-800 p-6 rounded-xl  max-w-sm mx-auto mt-20">
             <div className="p-6">
               <div className="flex justify-between">
-                <h2 className="text-lg font-semibold text-white">
-                  Professional
-                </h2>
+                <h2 className="text-lg font-semibold text-white">STANDARD</h2>
               </div>
               <p className="my-1 text-sm text-gray-400">
-                For established companies
+                Foundation for Platforms
               </p>
               <p className="my-4">
                 <span className="text-4xl font-bold tracking-tight text-violet-400">
-                  $49
+                  7,999
                 </span>
                 <span className="text-base font-medium text-gray-400">
                   /month
@@ -63,49 +61,128 @@ export default function Pricing() {
               </h3>
               <ul role="list" className="mt-6 space-y-4">
                 <li className="flex space-x-3">
-                  <CheckIcon className="text-green-500" />
-                  <span className="text-sm text-gray-400 ">5 workspaces</span>
+                  <span className="text-md text-gray-500 font-semibold">
+                    AI-powered marketing automation
+                  </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
-
-                  <span className="text-sm text-gray-400">
-                    Unlimited testimonials
+                  <span className="text-sm text-gray-400 ">
+                    META Business portfolio
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    10 collection forms
+                    META Business Manager setup & Connect
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    20 embeddable widgets
+                    META messaging platforms
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    White labeled widgets and forms
+                    META Brand safety & suitability
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">Creative tools</span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    AI-Powered Common Benefits
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    Custom branding (logo, colors, etc...)
+                    Recover lost sales from cart recovery
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    2 members per workspace
+                    Accelerated testing with Ad variations
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Accurate attribution across GA4, Meta, Google Ads etc.
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    Advanced AI Competitive Advantage
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Fraud detection & prevention
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Personalized product recommendations
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    Platform Only Benefits (META)
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">Verified page</span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Get featured in feed
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Enhanced support
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    Platform Only Benefits (Google)
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Peek into competitors keyword
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Search trend insights
                   </span>
                 </li>
               </ul>
@@ -120,14 +197,14 @@ export default function Pricing() {
             </div>
             <div className="p-6">
               <div className="flex justify-between">
-                <h2 className="text-2xl font-bold text-white">Agency</h2>
+                <h2 className="text-2xl font-bold text-white">GROWTH</h2>
               </div>
               <p className="my-1 text-sm text-gray-400">
-                For established companies
+                Commerce & Conversions
               </p>
               <p className="my-4">
                 <span className="text-4xl font-bold tracking-tight text-violet-400">
-                  $49
+                  9,999
                 </span>
                 <span className="text-base font-medium text-gray-400">
                   /month
@@ -152,53 +229,111 @@ export default function Pricing() {
             </div>
             <div className="px-6 pt-4 pb-8">
               <h3 className="text-sm font-medium text-white">
-                What's included
+                What's included (Standard +)
               </h3>
               <ul role="list" className="mt-6 space-y-4">
                 <li className="flex space-x-3">
-                  <CheckIcon className="text-green-500" />
-                  <span className="text-sm text-gray-400 ">5 workspaces</span>
+                  <span className="text-md text-gray-500 font-semibold">
+                    AI-powered marketing automation
+                  </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
-
-                  <span className="text-sm text-gray-400">
-                    Unlimited testimonials
+                  <span className="text-sm text-gray-400 ">
+                    Commerce Manager
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    10 collection forms
+                    Data sources management
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">Reporting</span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    AI-Powered Common Benefits
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    20 embeddable widgets
+                    Easiest data pull from any API to Google Sheets
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    White labeled widgets and forms
+                    Click Spikes POS , Inventory & E-Commerce
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    Custom branding (logo, colors, etc...)
+                    Elevate with High-Intent Lead Generation
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    Advanced AI Competitive Advantage
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    2 members per workspace
+                    Generative AI for content creation
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Conversational commerce and AI assitants
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    Platform Only Benefits (META)
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Search optimization
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Impersonation protection
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    Platform Only Benefits (Google)
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">Keyword planner</span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Dynamic search ad
                   </span>
                 </li>
               </ul>
@@ -209,15 +344,13 @@ export default function Pricing() {
             <div className="p-6">
               <div className="flex justify-between">
                 <h2 className="text-lg font-semibold text-white">
-                  Professional
+                  PERFORMANCE
                 </h2>
               </div>
-              <p className="my-1 text-sm text-gray-400">
-                For established companies
-              </p>
+              <p className="my-1 text-sm text-gray-400">Optimize & Scale </p>
               <p className="my-4">
                 <span className="text-4xl font-bold tracking-tight text-violet-400">
-                  $49
+                  14,999
                 </span>
                 <span className="text-base font-medium text-gray-400">
                   /month
@@ -242,53 +375,113 @@ export default function Pricing() {
             </div>
             <div className="px-6 pt-4 pb-8">
               <h3 className="text-sm font-medium text-white">
-                What's included
+                What's included (Growth +)
               </h3>
               <ul role="list" className="mt-6 space-y-4">
                 <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    AI-powered marketing automation
+                  </span>
+                </li>
+                <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
-                  <span className="text-sm text-gray-400 ">5 workspaces</span>
+                  <span className="text-sm text-gray-400 ">Events manager</span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    Unlimited testimonials
+                    Dynamic Catalog ads
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    AI-Powered Common Benefits
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    10 collection forms
+                    Analysis of every action with AI
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    20 embeddable widgets
+                    Highly optimized E-commerce paid results
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    White labeled widgets and forms
+                    Conversion-optimized checkout
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    Advanced AI Competitive Advantage
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    Custom branding (logo, colors, etc...)
+                    Customer retention and lifetime value (LTV) prediction
                   </span>
                 </li>
                 <li className="flex space-x-3">
                   <CheckIcon className="text-green-500" />
 
                   <span className="text-sm text-gray-400">
-                    2 members per workspace
+                    Dynamic pricing and revenue optimization
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    Platform Only Benefits (META)
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Ad links to reels (2x)
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Impersonation protection
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <span className="text-md text-gray-500 font-semibold">
+                    Platform Only Benefits (Google)
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Customer pathway interaction
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Attribution model
+                  </span>
+                </li>
+                <li className="flex space-x-3">
+                  <CheckIcon className="text-green-500" />
+
+                  <span className="text-sm text-gray-400">
+                    Activating customer lifecycle goals
                   </span>
                 </li>
               </ul>

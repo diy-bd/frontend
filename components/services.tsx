@@ -1,46 +1,82 @@
 'use client';
-import { useState } from 'react';
-import Image from 'next/image';
-import WorflowImg01 from '@/public/images/workflow-01.png';
-import WorflowImg02 from '@/public/images/workflow-02.png';
-import WorflowImg03 from '@/public/images/workflow-03.png';
-import Spotlight from '@/components/spotlight';
+import { useRef, useState, useEffect } from 'react';
+import 'keen-slider/keen-slider.min.css';
+import { useKeenSlider, KeenSliderInstance } from 'keen-slider/react';
 
 export default function Services() {
-  const [services, setServices] = useState([
+  const [pause, setPause] = useState(false);
+  const animationRef = useRef<number>(0);
+  const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    loop: true,
+    renderMode: 'performance',
+    slides: {
+      perView: 3,
+      spacing: 16,
+    },
+    breakpoints: {
+      '(max-width: 1024px)': {
+        slides: { perView: 2, spacing: 12 },
+      },
+      '(max-width: 640px)': {
+        slides: { perView: 1, spacing: 8 },
+      },
+    },
+  });
+
+  // Smooth scroll via requestAnimationFrame
+  const animate = () => {
+    const slider = instanceRef.current;
+    if (!slider || pause) return;
+
+    const track = slider.track;
+    const current = track.details.position;
+    track.to(current + 0.002); // <- This is the correct method
+    animationRef.current = requestAnimationFrame(animate);
+  };
+
+  useEffect(() => {
+    animationRef.current = requestAnimationFrame(animate);
+    return () => {
+      if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    };
+  }, [pause]);
+
+  const services = [
     {
-      title: 'Digital Marketing Strategy ',
+      title: 'Digital Marketing Strategy',
       description:
-        'Comprehensive AI-powered marketing campaigns tailored for startups to enterprises, focusing on performance marketing and conversion optimization.',
+        'AI-powered campaigns tailored for startups to enterprises, focused on performance and conversion.',
       img: '/images/workflow-01.png',
     },
     {
       title: 'AI Marketing Automation',
       description:
-        'Intelligent automation tools to streamline customer engagement, lead nurturing, and sales funnel management.',
+        'Streamline customer engagement and funnel management with intelligent automation.',
       img: '/images/workflow-02.png',
     },
     {
       title: 'CRM Implementation & Optimization',
       description:
-        'Customized CRM solutions to enhance customer relationship management and operational efficiency.',
+        'Boost your CRM workflows with custom integration and smart automation.',
       img: '/images/workflow-03.png',
     },
     {
       title: 'Ethical Brand Consulting',
       description:
-        'Sustainable brand advocacy that builds trust and integrity in digital marketplaces.',
+        'Build trust through ethical, sustainable brand strategies that convert.',
       img: '/images/workflow-01.png',
     },
     {
       title: 'E-commerce Growth Solutions',
       description:
-        'End-to-end strategies for e-commerce businesses, including inbound marketing, customer personalization, and conversion rate optimization.',
-      img: '/images/workflow-01.png',
+        'Drive sales with inbound marketing, personalization, and conversion rate optimization.',
+      img: '/images/workflow-02.png',
     },
-  ]);
+  ];
+
   return (
     <section className="relative" id="services">
+      {/* Background */}
       <div
         className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
         aria-hidden="true"
@@ -52,74 +88,57 @@ export default function Services() {
           alt="Blurred shape"
         />
       </div>
+
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-400/.25),transparent)1] md:py-20">
+        <div className="border-t py-12 md:py-20">
           <div className="pb-12 md:pb-20">
             {/* Section header */}
             <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
-              <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-linear-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-linear-to-l after:from-transparent after:to-indigo-200/50">
-                <span className="inline-flex bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+              <div className="inline-flex items-center gap-3 pb-3">
+                <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
                   SERVICES
                 </span>
               </div>
-              <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,var(--color-gray-200),var(--color-indigo-200),var(--color-gray-50),var(--color-indigo-300),var(--color-gray-200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-                Map your product journey
+              <h2 className="bg-gradient-to-r from-gray-200 to-indigo-300 bg-clip-text text-transparent text-3xl font-semibold md:text-4xl">
+                Empowering Growth Through Smart Digital Services
               </h2>
-              <p className="text-lg text-indigo-200/65">
-                Simple and elegant interface to start collaborating with your
-                team in minutes. It seamlessly integrates with your code and
-                your favorite programming languages.
+              <p className="text-lg text-indigo-200/65 mt-4">
+                Explore our AI-driven solutions designed to optimize marketing,
+                automation, CRM, and brand success—tailored for the modern
+                business.
               </p>
             </div>
-            {/* Spotlight items */}
-            <Spotlight className="group mx-auto grid max-w-sm items-start gap-6 lg:max-w-none lg:grid-cols-3">
-              {/* Card 1 */}
+
+            {/* Slider */}
+            <div
+              ref={sliderRef}
+              onMouseEnter={() => setPause(true)}
+              onMouseLeave={() => setPause(false)}
+              className="keen-slider"
+            >
               {services.map((service, index) => (
-                <a
-                  className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-indigo-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-indigo-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 hover:after:opacity-20 group-hover:before:opacity-100"
-                  href="#0"
-                  key={index}
-                >
-                  <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-linear-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
-                    <div
-                      className="absolute right-6 top-6 flex h-8 w-8 items-center justify-center rounded-full border border-gray-700/50 bg-gray-800/65 text-gray-200 opacity-0 transition-opacity group-hover/card:opacity-100"
-                      aria-hidden="true"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width={9}
-                        height={8}
-                        fill="none"
-                      >
-                        <path
-                          fill="#F4F4F5"
-                          d="m4.92 8-.787-.763 2.733-2.68H0V3.443h6.866L4.133.767 4.92 0 9 4 4.92 8Z"
-                        />
-                      </svg>
-                    </div>
-                    <img
-                      className="inline-flex"
-                      src={service.img}
-                      alt="Workflow 01"
-                      style={{ width: '350px', height: '288px' }}
-                    />
-                    {/* Content */}
-                    <div className="p-6">
-                      <div className="mb-3">
-                        <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,--theme(--color-gray-700/.15),--theme(--color-gray-700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
-                          <span className="bg-linear-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-                            {service.title}
-                          </span>
-                        </span>
+                <div className="keen-slider__slide" key={index}>
+                  <div className="h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
+                    <div className="relative h-full overflow-hidden rounded-[inherit] bg-gray-950">
+                      <img
+                        className="w-full"
+                        src={service.img}
+                        alt={service.title}
+                        style={{ height: '200px', objectFit: 'cover' }}
+                      />
+                      <div className="p-6">
+                        <h3 className="text-indigo-300 font-semibold mb-2">
+                          {service.title}
+                        </h3>
+                        <p className="text-indigo-200/65 text-sm">
+                          {service.description}
+                        </p>
                       </div>
-                      <p className="text-indigo-200/65">
-                        {service.description}
-                      </p>
                     </div>
                   </div>
-                </a>
+                </div>
               ))}
-            </Spotlight>
+            </div>
           </div>
         </div>
       </div>

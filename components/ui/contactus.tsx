@@ -105,9 +105,13 @@ export default function ContactUs() {
                   />
                 </svg>
 
-                <span className="mx-2 text-white truncate w-72">
+                <a
+                  href="mailto:contact@agentdiy.io"
+                  target="_blank"
+                  className="mx-2 text-white truncate w-72"
+                >
                   contact@agentdiy.io
-                </span>
+                </a>
               </p>
             </div>
 
@@ -117,7 +121,8 @@ export default function ContactUs() {
               <div className="flex mt-4 -mx-1.5 ">
                 <a
                   className="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500"
-                  href="#"
+                  href="https://www.linkedin.com/company/agent-diy/"
+                  target="_blank"
                 >
                   <svg
                     className="w-8 h-8"
@@ -142,7 +147,8 @@ export default function ContactUs() {
 
                 <a
                   className="mx-1.5 text-white transition-colors duration-300 transform hover:text-blue-500"
-                  href="#"
+                  href="https://www.facebook.com/agentdiy.io/"
+                  target="_blank"
                 >
                   <svg
                     className="w-8 h-8"
