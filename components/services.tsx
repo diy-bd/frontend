@@ -43,33 +43,33 @@ export default function Services() {
 
   const services = [
     {
-      title: 'Digital Marketing Strategy',
+      title: 'AI-Driven Business Solutions',
       description:
-        'AI-powered campaigns tailored for startups to enterprises, focused on performance and conversion.',
+        'Transform your business operations with our meticulously designed AI solutions that enhance efficiency, facilitate advanced data analysis, and support strategic decision-making processes. Our AI-powered approach is central to empowering businesses across Bangladesh and globally.',
       img: '/images/workflow-01.png',
     },
     {
-      title: 'AI Marketing Automation',
+      title: 'Digital Marketing Strategies',
       description:
-        'Streamline customer engagement and funnel management with intelligent automation.',
+        'Leverage our comprehensive digital marketing expertise spanning performance marketing, conversion optimization, and e-commerce growth strategies. We deliver measurable outcomes and competitive advantages in the digital realm through data-driven approaches.',
       img: '/images/workflow-02.png',
     },
     {
-      title: 'CRM Implementation & Optimization',
+      title: 'Intelligent Automation Tools',
       description:
-        'Boost your CRM workflows with custom integration and smart automation.',
+        'Streamline your business processes with our intelligent automation solutions, including advanced CRM implementation. Our tools reduce manual overhead while enhancing operational efficiency across all business functions.',
       img: '/images/workflow-03.png',
     },
     {
-      title: 'Ethical Brand Consulting',
+      title: 'Ethical Brand Consulting Services',
       description:
-        'Build trust through ethical, sustainable brand strategies that convert.',
+        'Build responsible, values-driven brands with our sustainable brand advocacy services. We guide businesses in aligning their market presence with ethical considerations and long-term sustainability goals.',
       img: '/images/workflow-01.png',
     },
     {
-      title: 'E-commerce Growth Solutions',
+      title: 'Performance Marketing Excellence',
       description:
-        'Drive sales with inbound marketing, personalization, and conversion rate optimization.',
+        'Strategic campaign development and optimization with advanced audience segmentation, conversion tracking, and comprehensive performance monitoring.',
       img: '/images/workflow-02.png',
     },
   ];
@@ -103,9 +103,9 @@ export default function Services() {
                 Empowering Growth Through Smart Digital Services
               </h2>
               <p className="text-lg text-indigo-200/65 mt-4">
-                Explore our AI-driven solutions designed to optimize marketing,
-                automation, CRM, and brand success—tailored for the modern
-                business.
+                Agent DiY's service offerings are structured around four
+                interconnected pillars, each meticulously crafted to deliver
+                transformative value to clients.
               </p>
             </div>
 

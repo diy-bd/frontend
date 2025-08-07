@@ -13,6 +13,7 @@ import Pricing from '@/components/ui/pricing';
 import ContactUs from '@/components/ui/contactus';
 import Faq from '@/components/ui/faq';
 import AboutUs from '@/components/ui/aboutus';
+import WhyUs from '@/components/whyus';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
       <Features />
       <Pricing />
       <Testimonials />
+      <WhyUs />
       {/* <Cta /> */}
       <ContactUs />
       <Faq />

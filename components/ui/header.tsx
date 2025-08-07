@@ -13,14 +13,13 @@ export default function Header() {
             'url("https://images.unsplash.com/photo-1626761191814-a9dc9efd085c?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&amp;auto=format&amp;fit=crop&amp;w=2664&amp;q=80")',
         }}
       >
-        <h1 className="block antialiased tracking-normal font-sans text-2xl font-semibold leading-tight text-white mb-4 !leading-tight lg:text-7xl z-20">
-          Empowering Businesses with AI-Driven Solutions
+        <h1 className="block antialiased tracking-normal font-sans text-2xl font-semibold leading-tight text-white mb-4 !leading-tight lg:text-6xl z-20">
+          Empower Your Business with AI-Driven Growth
         </h1>
         <p className="block antialiased font-sans text-xl font-normal leading-relaxed text-white mb-12 w-full opacity-80 md:w-10/12 lg:w-7/12 mx-auto px-28 z-10">
-          We specialize in empowering businesses of all sizes from ambitious
-          startups to established enterprises with cutting-edge digital
-          marketing strategies, intelligent automation tools, and ethical brand
-          consulting services.
+          Research & create your business; Build website, automate marketing,
+          and grow sustainably with Agent DiY's no-code AI platform—no tech
+          skills needed.
         </p>
         <div className="w-auto mx-auto">
           <div className="flex items-center">
@@ -34,7 +33,7 @@ export default function Header() {
                 );
               }}
             >
-              Book a Session
+              Book Free Session
             </button>
           </div>
         </div>
